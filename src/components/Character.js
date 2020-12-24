@@ -5,7 +5,9 @@ export default function Character({ item }) {
   return (
     <li className='character'>
       <div className='character__left-block'>
-        <img className='character__img' src={item.image} alt={item.name} />
+        <Link className='character__link' to={`/${item.id}`}>
+          <img className='character__img' src={item.image} alt={item.name} />
+        </Link>
       </div>
       <div className='character__right-block'>
         <Link className='character__link' to={`/${item.id}`}>
