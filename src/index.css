@@ -1,0 +1,137 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scrollbar-color: #cacc50 rgb(32, 35, 41);
+  scrollbar-width: auto;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  background: rgb(32, 35, 41);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+/* END OF GLOBAL */
+
+/* CHARACTER*/
+.character {
+  display: flex;
+  align-items: center;
+  width: 60rem;
+  height: 22rem;
+  background: rgb(60, 62, 68);
+  margin: 1rem;
+  color: rgb(255, 255, 255);
+  list-style: none;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.character__left-block {
+  display: block;
+  height: 100%;
+  flex: 2 1 0%;
+}
+.character__img {
+  width: 100%;
+}
+.character__right-block {
+  flex: 3 1 0%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 3rem;
+}
+.character__link {
+  text-decoration: none;
+}
+.character__title {
+  text-decoration: none;
+  font-size: 2.7rem;
+  color: #f5f5f5;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: initial;
+    width: 100%;
+  }
+  .character__left-block {
+    width: 100%;
+  }
+  .character__img {
+    height: 30rem;
+    object-position: center center;
+    object-fit: cover;
+  }
+  .character__right-block {
+    padding: 2rem 0;
+    align-items: center;
+  }
+}
+/* END OF CHARACTER*/
+
+/* LOADING */
+.loading-container {
+  padding: 1rem;
+}
+.loading {
+  font-size: 5rem;
+  text-align: center;
+  color: #f2f2f2;
+}
+/* END OF LOADING */
+
+/* CHARACTERDETAILED */
+.container__single-character {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.character__status {
+  display: flex;
+  align-items: baseline;
+}
+.character__status-title {
+  margin-right: 0.5rem;
+}
+.character__status-color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+}
+.character__status-color.dead {
+  background: rgb(240, 30, 30);
+}
+.character__status-color.alive {
+  background: rgb(112, 255, 56);
+}
+.character__gender-title {
+  margin-right: 0.7rem;
+}
+.character__location-title {
+  margin-right: 0.7rem;
+}
+/* END OF CHARACTERDETAILED */
+
+::-webkit-scrollbar {
+  width: 24px;
+  background-color: rgb(32, 35, 41);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #cacc50;
+  border-radius: 9em;
+}
