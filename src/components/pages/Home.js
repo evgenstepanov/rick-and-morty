@@ -32,7 +32,6 @@ export default function Home() {
 
   return (
     <>
-      <header>РАБОТssssaaaasАЕМ!!!</header>
       <section className='container'>
         {characters.map(item => (
           <Character item={item} key={item.id} />
