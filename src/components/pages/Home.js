@@ -38,7 +38,7 @@ export default function Home() {
         ))}
       </section>
       <div className='loading-container' ref={container}>
-        {loading ? <div className='loading'>LOADING</div> : null}
+        {loading ? <h2 className='loading'>LOADING</h2> : null}
       </div>
     </>
   );

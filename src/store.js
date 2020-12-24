@@ -8,8 +8,6 @@ export default ({ children }) => {
   const [loading, setLoading] = useState(false);
   const char = useRef(10);
 
-
-  
   useEffect(() => {
     if (intersect) {
       fetchCharacters();
