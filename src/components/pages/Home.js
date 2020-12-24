@@ -32,11 +32,11 @@ export default function Home() {
 
   return (
     <>
-      <section className='container'>
+      <ul className='container'>
         {characters.map(item => (
           <Character item={item} key={item.id} />
         ))}
-      </section>
+      </ul>
       <div className='loading-container' ref={container}>
         {loading ? <h2 className='loading'>LOADING</h2> : null}
       </div>
