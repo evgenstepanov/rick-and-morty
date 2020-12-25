@@ -1,17 +1,22 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { StoreContext } from '../../store';
+import { useParams } from 'react-router-dom';
 import CharacterDetailed from '../CharacterDetailed';
+import axios from 'axios';
 
 export default function CharacterPage() {
-  const { getSingleCharacter } = useContext(StoreContext);
   const [singleCharacter, setSingleCharacter] = useState();
   let { id } = useParams();
 
   useEffect(() => {
-    let character = getSingleCharacter(+id);
-    setSingleCharacter(character);
+    fetchSingleCharacters(id);
   }, []);
+
+  async function fetchSingleCharacters(id) {
+    const result = await axios(
+      `https://rickandmortyapi.com/api/character/${id}`
+    );
+    setSingleCharacter(result.data);
+  }
 
   if (singleCharacter) {
     return <CharacterDetailed singleCharacter={singleCharacter} />;
